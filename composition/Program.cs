@@ -9,28 +9,29 @@ internal class Program
 
 
         Engine engine = new Engine();
-        engine.setPower(240);
+        engine.Power = 240;
 
 
         Cars cars = new Cars(Name.BMW, 2020, 7000_00, engine);
-        Console.WriteLine("Name: " + cars.getName());
-        Console.WriteLine("Model: " + cars.getModel());
-        Console.WriteLine("price: " + cars.getPrice());
-        Console.WriteLine("power of engine: " + cars.getEngine().getPower());
+
+        Console.WriteLine(cars);
+
 
         Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
-        engine.setPower(280);
-        engine.setName("Germany");
-        cars.setEngine(engine);
-        cars.setName(Name.MS);
+        engine.Power = 280;
+        engine.Name = "Germany";
 
-        Console.WriteLine("Name: " + cars.getName());
-        Console.WriteLine("Model: " + cars.getModel());
-        Console.WriteLine("price: " + cars.getPrice());
-        Console.WriteLine("power of engine: " + cars.getEngine().getPower());
-        Console.WriteLine("name of engine is: "+engine.getName());
-        Console.WriteLine("name of engine is: " + cars.getEngine().getName());
+        cars.Name = Name.MS;
+        cars.Engine = engine;
+        cars.Price = 1000_000;
+
+        Console.WriteLine("Name: " + cars.Name);
+        Console.WriteLine("Model: " + cars.Model);
+        Console.WriteLine("price: " + cars.Price);
+        Console.WriteLine("power of engine: " + cars.Engine.Power);
+        Console.WriteLine("name of engine is: "+engine.Name);
+        Console.WriteLine("name of engine is: " + cars.Engine.Name);
 
 
 

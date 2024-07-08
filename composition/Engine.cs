@@ -1,52 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace composition
 {
     internal class Engine
     {
-        private string name;
-        private int power;
-        private string type;
+        private string _Name;
+        private int _Power;
+        private string _Type;
 
 
         public Engine() { }
         public Engine(string name, int power, string type)
         {
-            this.name = name;
-            this.power = power;
-            this.type = type;
+            Name = name;
+            Power = power;
+            Type = type;
         }
 
-
-        public void setName(string name)
-        {
-            this.name = name;
-        }
-
-        public void setPower(int power)
-        {
-            this.power = power;
-        }
-
-        public string getName()
-        {
-            return this.name;
-        }
-
-        public int getPower()
-        {
-            return this.power;
-        }
-        public string getType()
-        {
-            return this.type;
-        }
-
-
-
-    }
+		public string Name { get => _Name; set => _Name = value; }
+		public int Power { get => _Power; set => _Power = value; }
+		public string Type { get => _Type; set => _Type = value; }
+	}
 }
